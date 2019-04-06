@@ -1,0 +1,5 @@
+# Matplotlib :
+# apt install python-matplotlib
+
+# NumPy
+# apt install python-numpy
