@@ -1,0 +1,65 @@
+
+> mkdir /django
+> cd /django
+
+> apt-get update
+> apt-get install python-pip
+
+################################################
+# Instalación de Django con python 3
+# usa Django 2.2
+> apt-get install python3-venv
+> mkdir python3
+> cd python3
+root@kali:/django/python3#
+
+> python3 -m venv .
+
+> source bin/activate
+(python3) root@kali:/django/python3#
+(python3)> pip install django
+(python3)> django-admin startproject mysite
+(python3)> cd mysite
+(python3/mysite)> python manage.py migrate
+(python3/mysite)> python manage.py runserver
+> Ctrl+C
+(python3/mysite)> deactivate
+
+################################################
+# Instalación de Django CMS con python 3
+> mkdir djangocms
+> cd djangocms
+root@kali:/django/djangocms#
+
+> python3 -m venv .
+
+> source bin/activate
+(djangocms) root@kali:/django/djangocms#
+(djangocms)> pip install djangocms-installer
+(djangocms)> djangocms mysite
+(djangocms)> cd mysite
+(djangocms/mysite)> python manage.py createsuperuser
+(djangocms/mysite)> python manage.py runserver
+
+
+
+################################################
+# (Old) Instalación de Django con python 2.7
+# usa Django 1.11
+# DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020.
+> pip install virtualenv
+> mkdir python2
+> cd python2
+root@kali:/django/python2#
+
+> virtualenv .
+
+> source bin/activate
+(python2) root@kali:/django/python2#
+(python2)> pip install django
+(python2)> django-admin startproject mysite
+(python2)> cd mysite
+(python2/mysite)> python manage.py migrate
+(python2/mysite)> python manage.py runserver
+> Ctrl+C
+(python2/mysite)> deactivate
