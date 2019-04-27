@@ -1,0 +1,7 @@
+python3 -m venv pyprojects
+cd pyprojects
+source ./bin/activate
+> pip install django
+> django-admin startproject mysite
+> cd mysite
+> python manage.py startapp polls
